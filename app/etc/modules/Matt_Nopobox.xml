@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Matt_Nopobox>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Matt_Nopobox>
+    </modules>
+</config>

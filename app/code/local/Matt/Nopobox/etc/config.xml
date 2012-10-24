@@ -1,0 +1,16 @@
+<config>    
+    <modules>
+        <Matt_Nopobox>
+            <version>0.1.0</version>
+        </Matt_Nopobox>
+    </modules>
+    <global>
+        <models>
+          <sales>
+              <rewrite>
+                  <quote_address>Matt_Nopobox_Model_Quote_Address</quote_address>
+              </rewrite>
+          </sales>
+       </models>
+    </global>    
+</config>
