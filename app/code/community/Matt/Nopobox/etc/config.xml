@@ -1,7 +1,7 @@
 <config>    
     <modules>
         <Matt_Nopobox>
-            <version>0.1.0</version>
+            <version>1.1.0</version>
         </Matt_Nopobox>
     </modules>
     <global>

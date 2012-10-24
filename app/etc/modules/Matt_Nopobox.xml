@@ -1,8 +1,9 @@
+<?xml version="1.0"?>
 <config>
-    <modules>
-        <Matt_Nopobox>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Matt_Nopobox>
-    </modules>
+  <modules>
+    <Matt_Nopobox>
+      <active>true</active>
+      <codePool>community</codePool>
+    </Matt_Nopobox>
+  </modules>
 </config>
