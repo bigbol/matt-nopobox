@@ -17,9 +17,9 @@
     	<nopobox>
     		<option>
     			<active>0</active>
-    			<active>0</active>
-    			<active>0</active>
-    			<active>0</active>
+    			<allowspecific>0</allowspecific>
+    			<cerror>To this country , We can not send the shipping address contains PO box.</cerror>
+    			<aerror>We can not send the shipping address contains PO box.</aerror>
     		</option>
     	</nopobox>
     </default>
