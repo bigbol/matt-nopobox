@@ -12,5 +12,15 @@
               </rewrite>
           </sales>
        </models>
-    </global>    
+    </global> 
+    <default>
+    	<nopobox>
+    		<option>
+    			<active>0</active>
+    			<active>0</active>
+    			<active>0</active>
+    			<active>0</active>
+    		</option>
+    	</nopobox>
+    </default>
 </config>
