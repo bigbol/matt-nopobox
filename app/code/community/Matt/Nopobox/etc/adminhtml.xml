@@ -6,7 +6,7 @@
 				<children>
 					<system>
 						<children>
-				s			<config>
+							<config>
 								<children>
 									<nopobox translate="title" module="time">
 										<title>Matt Nopobox Setting</title>
