@@ -38,7 +38,6 @@
                             <frontend_type>select</frontend_type>
                             <comment>You can add country filter width nopobox shipping address.</comment>
                             <sort_order>20</sort_order>
-                            <frontend_class>shipping-applicable-country</frontend_class>
                             <source_model>adminhtml/system_config_source_shipping_allspecificcountries</source_model>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
