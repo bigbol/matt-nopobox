@@ -44,18 +44,27 @@ class Matt_Nopobox_Model_Quote_Address extends Mage_Sales_Model_Quote_Address{
 		if($active){
 			$errors = array();
 			$allowcountry = Mage::getStoreConfig('nopobox/option/allowspecific');
+			$flag = true;
 			if($allowcountry){
 				$specificcountry = Mage::getStoreConfig('nopobox/option/specificcountry');
 				$specificcountry = explode(',', $specificcountry);
-				if(in_array($this->getCountryId(), $specificcountry)){
-					$errors[] = Mage::helper('core')->__(Mage::getStoreConfig('nopobox/option/cerror'));
+				if(! in_array($this->getCountryId(), $specificcountry)){
+					$flag = false ;
+					$_error = Mage::helper('core')->__(Mage::getStoreConfig('nopobox/option/cerror'));
 				}
+			}else{
+				$flag = false;
 			}
 			//add filter for P.O. Box
-			if( preg_match("/p\.* *o\.* *box/i", $this->getStreet(1))
-					|| preg_match("/p\.* *o\.* *box/i", $this->getStreet(2)) )
-			{
-				$errors[] = Mage::helper('core')->__(Mage::getStoreConfig('nopobox/option/aerror'));
+			if(!$flag){
+				$re = "/p\.* *o\.* *box/i";
+				if(preg_match($re , $this->getStreet(1)) || preg_match($re, $this->getStreet(2)) ){
+					if(isset($_error)){
+						$errors[] = $_error;
+					}else{
+						$errors[] = Mage::helper('core')->__(Mage::getStoreConfig('nopobox/option/aerror'));
+					}
+				}
 			}
 			$_errors = parent::validate();
 			if( ( empty($errors) && $_errors === true ) || $this->getShouldIgnoreValidation()){
